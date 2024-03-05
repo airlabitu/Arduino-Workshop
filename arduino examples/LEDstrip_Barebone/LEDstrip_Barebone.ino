@@ -1,6 +1,3 @@
-#include <IRremote.h>
-#include <IRremoteInt.h>
-
 /* LEDstrip Barebone | AIRLAB CCC#2
  * 
  * The code serves as an absolut minimum for working with LED strips
