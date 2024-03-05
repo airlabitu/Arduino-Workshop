@@ -9,12 +9,12 @@
  */
 
 #include <FastLED.h>
+
 #define NUM_LEDS 10
 #define DATA_PIN 3
-CRGB leds[NUM_LEDS];
-int sensorPin = A0;
+#define SENSOR_PIN A0
 int sensorVal = 0;
-//#define sensorPin A0
+CRGB leds[NUM_LEDS];
 
 void setup() 
 {
@@ -23,14 +23,14 @@ void setup()
   // turn off the LED
   leds[3] = CRGB(0,0,0);
   FastLED.show();
-  pinMode(sensorPin, INPUT);
+  pinMode(SENSOR_PIN, INPUT);
   Serial.begin(9600);
 }
 
 
 void loop()
 {
-  sensorVal = analogRead(sensorPin);
+  sensorVal = analogRead(SENSOR_PIN);
   Serial.println(sensorVal);
 
   if (sensorVal > 500){
