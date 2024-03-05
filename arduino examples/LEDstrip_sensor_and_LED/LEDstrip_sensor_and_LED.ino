@@ -13,6 +13,7 @@
 #define NUM_LEDS 10
 #define DATA_PIN 3
 #define SENSOR_PIN A0
+
 int sensorVal = 0;
 CRGB leds[NUM_LEDS];
 
