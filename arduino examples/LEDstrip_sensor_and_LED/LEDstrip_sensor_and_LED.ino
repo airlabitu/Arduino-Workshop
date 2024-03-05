@@ -21,8 +21,8 @@ void setup()
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
   
   // turn off the LED
-  // leds[3] = CRGB(0,0,0);
-  // FastLED.show();
+  leds[3] = CRGB(0,0,0);
+  FastLED.show();
   pinMode(sensorPin, INPUT);
   Serial.begin(9600);
 }
@@ -36,14 +36,10 @@ void loop()
   if (sensorVal > 500){
     // turn on LED [3] (the fourth)
     leds[3] = CRGB(255,0,0);
-    //FastLED.show();
-    //delay(1000); // wait 1 sec
   }
   else {
     // turn off LED [3] (the fourth)
     leds[3] = CRGB(0,0,0);
-    //FastLED.show();
-    //delay(1000); // wait 1 sec
   }
   
   FastLED.show();
